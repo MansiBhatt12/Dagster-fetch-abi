@@ -5,6 +5,15 @@ This Dagster project demonstrates a data pipeline that reads contract addresses 
 * asset.py :  This file contains the code to fetch the ABIs and also defines asset.
 * __init__.py : This file defines the jobs and schedules that are used by the project.
 
+## Features
+
+* The project can fetch ABIs for 500 contract addresses.
+* It read the data from a csv file and saved the result to a CSV file in the file system.
+* The project includes scheduled pipeline, a predefined job and schedule to run the pipeline every hour.
+* A defined sensor which is responsible for checking for changes to the contract API assets at 30 sec interval of time.
+* The project also uses the File System I/O Manager to store the fetched data in a directory called 'data' in your file system to a more permanent location.
+
+
 ## Setup
 
 To run the project, you will need to have Dagster installed (installation instructions: https://docs.dagster.io/getting_started/installation). Once you have Dagster installed in your python local environment, you can run the project by following these steps:
